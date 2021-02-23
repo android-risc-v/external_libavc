@@ -170,6 +170,12 @@ cc_library_static {
             srcs: ["decoder/mips/ih264d_function_selector.c"],
         },
 
+        riscv64: {
+            local_include_dirs: ["common/riscv"],
+
+            srcs: ["decoder/riscv/ih264d_function_selector.c"],
+        },
+
         x86: {
             cflags: [
                 "-DX86",
@@ -429,6 +435,15 @@ cc_library_static {
             ],
 
             srcs: ["encoder/mips/ih264e_function_selector.c"],
+        },
+
+        riscv64: {
+            local_include_dirs: [
+                "common/riscv",
+                "encoder/riscv",
+            ],
+
+            srcs: ["encoder/riscv/ih264e_function_selector.c"],
         },
 
         x86: {
