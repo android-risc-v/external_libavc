@@ -179,6 +179,12 @@ cc_library_static {
             ],
         },
 
+        riscv64: {
+            local_include_dirs: ["common/riscv"],
+
+            srcs: ["decoder/riscv/ih264d_function_selector.c"],
+        },
+
         x86: {
             cflags: [
                 "-DX86",
@@ -432,6 +438,15 @@ cc_library_static {
                 "encoder/armv8/ih264e_half_pel_av8.s",
                 "encoder/armv8/ime_distortion_metrics_av8.s",
             ],
+        },
+
+        riscv64: {
+            local_include_dirs: [
+                "common/riscv",
+                "encoder/riscv",
+            ],
+
+            srcs: ["encoder/riscv/ih264e_function_selector.c"],
         },
 
         x86: {
