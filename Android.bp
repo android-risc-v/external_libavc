@@ -251,7 +251,7 @@ cc_library_static {
     sanitize: {
         integer_overflow: true,
         misc_undefined: ["bounds"],
-        cfi: true,
+        cfi: false,
         config: {
             cfi_assembly_support: true,
         },
@@ -523,7 +523,7 @@ cc_library_static {
     sanitize: {
         integer_overflow: true,
         misc_undefined: ["bounds"],
-        cfi: true,
+        cfi: false,
         config: {
             cfi_assembly_support: true,
         },
